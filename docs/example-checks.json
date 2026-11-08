@@ -1,0 +1,82 @@
+[
+  {
+    "file": "standard-resume",
+    "pages": 1,
+    "docx_matches_fixture": true,
+    "pdf_flow_and_layout_text_order": true,
+    "structure": {
+      "structural_status": "clear",
+      "blocking_findings": [],
+      "warnings": [],
+      "checks": {
+        "missing_required_text": [],
+        "baseline_text_equal": null
+      },
+      "structure": {
+        "tables": 0,
+        "text_boxes": 0,
+        "drawings": 0,
+        "multi_column_sections": 0,
+        "comments": 0,
+        "tracked_changes": 0,
+        "hidden_settings": 0,
+        "exact_height_rows": 0
+      },
+      "visual_review": "not_performed",
+      "ats_test": "not_performed",
+      "limitations": [
+        "No rendering, font substitution, page-count or clipping measurement.",
+        "XML body order is not a PDF reading-order or assistive-technology test.",
+        "Style inheritance and field results are not fully resolved; flags require review.",
+        "Text equality ignores whitespace; it does not prove factual or semantic accuracy.",
+        "Required-text checks are literal substrings, not evidence verification."
+      ]
+    },
+    "embedded_font_rows": 6,
+    "pdf_uri_annotations": [],
+    "sha256": {
+      "standard-resume.docx": "59a71cf72151f22130c9861f5e45bb08fe4abbe8c712f58e1105ee05ede5cf69",
+      "standard-resume.pdf": "f3b1688050b01feb64679e07e86c35b6df2c219b6c41dcc9b6e86153c55f5240"
+    }
+  },
+  {
+    "file": "experienced-manager-resume",
+    "pages": 2,
+    "docx_matches_fixture": true,
+    "pdf_flow_and_layout_text_order": true,
+    "structure": {
+      "structural_status": "clear",
+      "blocking_findings": [],
+      "warnings": [],
+      "checks": {
+        "missing_required_text": [],
+        "baseline_text_equal": null
+      },
+      "structure": {
+        "tables": 0,
+        "text_boxes": 0,
+        "drawings": 0,
+        "multi_column_sections": 0,
+        "comments": 0,
+        "tracked_changes": 0,
+        "hidden_settings": 0,
+        "exact_height_rows": 0
+      },
+      "visual_review": "not_performed",
+      "ats_test": "not_performed",
+      "limitations": [
+        "No rendering, font substitution, page-count or clipping measurement.",
+        "XML body order is not a PDF reading-order or assistive-technology test.",
+        "Style inheritance and field results are not fully resolved; flags require review.",
+        "Text equality ignores whitespace; it does not prove factual or semantic accuracy.",
+        "Required-text checks are literal substrings, not evidence verification."
+      ]
+    },
+    "embedded_font_rows": 6,
+    "pdf_uri_annotations": [],
+    "sha256": {
+      "experienced-manager-resume.docx": "f457d0e443221b33e3a830ee9cab182763aac1ef2cd498801a1f2a8d6c2d315c",
+      "experienced-manager-resume.pdf": "aecac4c290993e19f5a42568c91ef8a53f883203e27de844efc7eed48b1c5738"
+    }
+  }
+]

@@ -1,0 +1,2 @@
+# Only required to rebuild the original synthetic DOCX examples.
+python-docx==1.2.0

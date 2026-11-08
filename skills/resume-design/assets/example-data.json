@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "purpose": "Original synthetic fixtures for demonstrating a resume-design skill. These are not real applicants or career claims.",
+    "provenance": "Written from scratch for this skill; no third-party resume or template was copied.",
+    "fictional_content": "Every person, employer, institution, project, date, and performance metric is invented for demonstration. Product names identify familiar software only; they do not imply sponsorship.",
+    "contacts": "All contact addresses and links use the reserved example.org domain.",
+    "layout": "US Letter portrait; 20 mm margins; 11 pt body; single column; semantic headings; native Word bullets; no layout tables or text boxes."
+  },
+  "resumes": [
+    {
+      "slug": "standard-resume",
+      "language": "en",
+      "name": "Mira Vale",
+      "headline": "Operations Analyst",
+      "contact": "mira.vale@example.org | https://example.org/mira-vale",
+      "disclosure": "Fictional example. All people, organizations, career details, and metrics are for demonstration.",
+      "summary_heading": "Profile",
+      "summary": "Operations analyst who turns recurring service problems into clear workflows and useful reporting. Experienced in queue analysis, process documentation, and cross-team delivery. Connects customer feedback with operational data to prioritize practical improvements and measure results.",
+      "skills_heading": "Core skills",
+      "skills": "Process mapping · Service reporting · Root-cause analysis · Stakeholder coordination\nMicrosoft Excel · Google Sheets · SQL · Jira",
+      "pages": [
+        {
+          "sections": [
+            {
+              "title": "Experience",
+              "roles": [
+                {
+                  "heading": "Velunara Systems | Operations Analyst | Apr 2023 - Jun 2026",
+                  "scope": "Fictional software company; supported service operations across three product teams.",
+                  "bullets": [
+                    "Redesigned intake and triage for 1,200 monthly requests, reducing median assignment time from 18 hours to 7 hours over two quarters.",
+                    "Built a weekly SQL and Excel report that exposed repeat failure patterns; helped teams reduce reopened cases from 14% to 9%.",
+                    "Coordinated a six-week pilot of revised escalation rules, documented exceptions, and trained 24 colleagues before rollout.",
+                    "Maintained an operating guide with named owners and review dates, cutting outdated procedures from 31 to 6 in one audit cycle."
+                  ]
+                },
+                {
+                  "heading": "Orvessa Services | Operations Coordinator | Aug 2020 - Mar 2023",
+                  "scope": "Fictional subscription service; managed reporting and handoffs for a 12-person team.",
+                  "bullets": [
+                    "Standardized daily handoff notes and a shared issue register, reducing missed follow-ups from 22 to 8 per month.",
+                    "Reconciled billing exceptions in Google Sheets and introduced a review checklist that reduced rework by 27%.",
+                    "Prepared monthly service reviews that connected volume, response times, and customer feedback to three agreed improvement priorities."
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Education",
+              "paragraphs": [
+                "Example Learning Institute (fictional) | BA, Applied Social Studies | 2016 - 2020",
+                "Capstone: a fictional public-service queue study combining interviews and descriptive statistics."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "experienced-manager-resume",
+      "language": "ko",
+      "name": "윤서하",
+      "headline": "제품 운영팀 리드",
+      "contact": "yun.seoha@example.org | https://example.org/seoha-yun",
+      "disclosure": "예시의 인물, 기업, 교육기관, 경력과 성과 수치는 모두 가상입니다.",
+      "summary_heading": "경력 요약",
+      "summary": "제품 운영과 고객 지원 조직에서 업무 기준, 팀 운영, 개선 과제를 관리했습니다. 현장 이슈를 데이터로 정리하고 개발·영업 조직과 우선순위를 합의해 서비스 품질을 개선했습니다.",
+      "skills_heading": "핵심 역량",
+      "skills": "운영 전략과 지표 설계 · 팀 코칭 · 부서 간 조율 · 서비스 개선\nMicrosoft Excel · Google Sheets · SQL · Jira · Power BI",
+      "pages": [
+        {
+          "sections": [
+            {
+              "title": "최근 경력",
+              "roles": [
+                {
+                  "heading": "마루결 소프트웨어 | 제품 운영팀장 | 2022.03 - 2026.06",
+                  "scope": "가상 B2B 소프트웨어 기업. 운영 담당자 8명의 업무 배분, 코칭, 품질 관리와 분기 개선 계획을 총괄했습니다.",
+                  "bullets": [
+                    "문의 유형과 고객 영향을 기준으로 처리 순서를 재설계했습니다. 주간 병목 점검을 정착시켜 최초 응답 중앙값을 9시간에서 4시간으로 단축했습니다.",
+                    "제품별 운영 지표를 Power BI 대시보드로 통합하고 개발 조직과 월간 검토를 진행했습니다. 반복 문의 비중을 두 분기 동안 26%에서 18%로 낮췄습니다.",
+                    "신규 팀원의 30·60·90일 적응 계획과 동료 검토 기준을 만들었습니다. 독립 업무 수행까지 걸리는 중앙 기간을 10주에서 7주로 줄였습니다."
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "병행 경력",
+              "roles": [
+                {
+                  "heading": "온빛 실험실 | 운영 자문 | 2024.02 - 2025.11",
+                  "scope": "가상 연구 조직의 별도 계약 역할. 위 재직 기간 중 주 1일 병행했으며, 경력 기간을 합산하지 않았습니다.",
+                  "bullets": [
+                    "소규모 실험의 접수·검토·종료 기준을 자문하고 Google Sheets 기록 양식을 설계했습니다. 12개 실험의 담당자와 다음 결정 시점을 한곳에서 확인하도록 했습니다."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "continuation": "윤서하 | 이전 경력과 주요 프로젝트",
+          "sections": [
+            {
+              "title": "이전 경력",
+              "roles": [
+                {
+                  "heading": "서리나무 플랫폼 | 운영 매니저 | 2018.07 - 2022.02",
+                  "scope": "가상 온라인 서비스 기업. 5명으로 구성된 운영 파트의 일정, 업무 기준, 고객 이슈 개선을 담당했습니다.",
+                  "bullets": [
+                    "세 개 서비스의 문의 분류 기준을 통일하고 SQL 집계 결과를 주간 회의에 활용했습니다. 미분류 문의 비중을 17%에서 6%로 낮췄습니다.",
+                    "담당자 교체 시 필요한 인수인계 항목과 점검 순서를 정리했습니다. 휴가 기간에도 핵심 업무가 누락되지 않도록 두 명씩 교차 교육했습니다.",
+                    "정산 검토를 Microsoft Excel 양식으로 표준화하고 대조 항목을 자동 계산했습니다. 월말 검토 시간을 16시간에서 10시간으로 줄였습니다."
+                  ]
+                },
+                {
+                  "heading": "다온결 서비스 | 고객 운영 담당 | 2015.03 - 2018.06",
+                  "scope": "가상 회원제 서비스 기업. 고객 문의 처리, 운영 데이터 정리, 업무 안내 문서 작성을 수행했습니다.",
+                  "bullets": [
+                    "반복 문의 20개 유형의 안내 문서를 정비하고 담당 부서의 검토 주기를 정했습니다. 같은 내용을 다시 확인하는 후속 문의를 24% 줄였습니다.",
+                    "신규 서비스의 사전 운영 점검에 참여해 오류 37건을 기록했습니다. 재현 단계와 고객 영향을 정리해 출시 전 수정 확인을 지원했습니다."
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "주요 프로젝트",
+              "bullets": [
+                "운영 지표 재정의 | 2025.01 - 2025.06: 응답 시간, 재문의, 해결률의 산식을 정리하고 표본 검토를 도입했습니다. 같은 지표를 부서마다 다르게 해석하는 문제를 줄였습니다.",
+                "서비스 전환 준비 | 2020.09 - 2021.02: 두 서비스의 전환 일정, 문의 대응, 예외 처리 목록을 관리했습니다. 전환 당일 점검과 4주간의 후속 검토를 조율했습니다."
+              ]
+            },
+            {
+              "title": "교육",
+              "paragraphs": [
+                "가상 배움연구원 | 조직 운영 실무 과정 | 2021.04 - 2021.07"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
