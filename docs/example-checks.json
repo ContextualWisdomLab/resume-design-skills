@@ -50,7 +50,7 @@
       "warnings": [],
       "checks": {
         "missing_required_text": [],
-        "baseline_text_equal": null
+        "baseline_text_equal": true
       },
       "structure": {
         "tables": 0,
@@ -75,8 +75,15 @@
     "embedded_font_rows": 6,
     "pdf_uri_annotations": [],
     "sha256": {
-      "experienced-manager-resume.docx": "f457d0e443221b33e3a830ee9cab182763aac1ef2cd498801a1f2a8d6c2d315c",
-      "experienced-manager-resume.pdf": "aecac4c290993e19f5a42568c91ef8a53f883203e27de844efc7eed48b1c5738"
-    }
+      "experienced-manager-resume.docx": "cb480fa26a822856415ac0f0298445ce7affc671dd5249435db1ff090da732aa",
+      "experienced-manager-resume.pdf": "f2703dfb3acb9126ea063a507ef0d085a823e2fa97781519ca267a5e2eb23409"
+    },
+    "embedded_font_faces": [
+      "Pretendard-Bold",
+      "Pretendard-Regular",
+      "Pretendard-SemiBold"
+    ],
+    "font_update_baseline": "a8ac06651242fb7248ba84902312e0e324b0ccb4",
+    "exact_paragraph_text_preserved": true
   }
 ]

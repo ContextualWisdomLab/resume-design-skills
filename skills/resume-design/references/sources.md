@@ -17,6 +17,7 @@
 | S9 | [Noto CJK — Sans download guide](https://github.com/notofonts/noto-cjk/blob/main/Sans/README.md), 언어별 글꼴 안내 | 한국어용 CJK 글꼴과 글꼴 형식 선택 확인 | 특정 서체가 채용에 유리하다는 근거가 아님. 글꼴 파일은 이 패키지에 포함하지 않음 |
 | S10 | [MIT CAPD — Resumes](https://capd.mit.edu/resources/resumes/), Five steps 및 Resume Tips; 발행일 미표시 | 직무 관련성, 일정한 형식, 절제된 강조, 경력·학위에 따른 분량 예외 | 교육 권고. 고정된 심사 시간이나 합격률의 실험 근거로 사용하지 않음 |
 | S11 | [MIT CAPD — Sample Resumes PDF](https://cdn.uconnectlabs.com/wp-content/uploads/sites/123/2021/08/sampe-resumes-capd.pdf), 14쪽 PDF의 추출 본문과 섹션 구성 확인 | 섹션 제목, 경력별 정보 묶음, 날짜 표기의 사례 | 오래된 학생·연구자 예시. 원본의 정밀 시각 검수나 현대 ATS 성능 평가는 하지 않음. 내용·서식·코드를 복제하지 않음 |
+| S12 | [Pretendard 공식 안내](https://github.com/orioncactus/pretendard/blob/main/packages/pretendard/docs/en/README.md) 및 [OFL-1.1](https://github.com/orioncactus/pretendard/blob/main/LICENSE), 정적 OTF 1.3.9의 이름·굵기·내장 설정 확인 | 한글·라틴 문자 혼용을 위한 패밀리 선택, Regular·SemiBold·Bold 구분, 문서용 정적 글꼴 사용 | 서체 선택은 자체 디자인 판단. 글꼴 파일을 패키지에 번들하지 않으며 PDF의 실제 포함·표시 상태는 따로 검증 |
 
 ## 이 프로젝트의 선택 D1
 

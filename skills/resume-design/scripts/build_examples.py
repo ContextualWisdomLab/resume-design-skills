@@ -75,7 +75,8 @@ def add_bullet_definition(doc, family):
 
 
 def configure(doc, profile):
-    family = "Noto Sans CJK KR" if profile["language"] == "ko" else "Noto Sans"
+    korean = profile["language"] == "ko"
+    family = "Pretendard" if korean else "Noto Sans"
     section = doc.sections[0]
     section.page_width, section.page_height = Inches(8.5), Inches(11)
     section.top_margin = section.bottom_margin = Mm(20)
@@ -93,7 +94,9 @@ def configure(doc, profile):
     for name, size, before, after in (("Title", 22, 0, 3),
                                       ("Heading 1", 12, 9, 4),
                                       ("Heading 2", 11, 5, 3)):
-        set_font(styles[name], family, size, True)
+        semibold = korean and name != "Title"
+        set_font(styles[name], "Pretendard SemiBold" if semibold else family,
+                 size, not semibold)
         formatting = styles[name].paragraph_format
         formatting.space_before, formatting.space_after = Pt(before), Pt(after)
         formatting.keep_with_next = True
@@ -104,7 +107,9 @@ def configure(doc, profile):
                               ("Resume Continuation", 12, 8)):
         style = styles.add_style(name, WD_STYLE_TYPE.PARAGRAPH)
         style.base_style = styles["Normal"]
-        set_font(style, family, size, name == "Resume Continuation")
+        semibold = korean and name == "Resume Continuation"
+        set_font(style, "Pretendard SemiBold" if semibold else family,
+                 size, name == "Resume Continuation" and not semibold)
         style.paragraph_format.space_after = Pt(after)
         style.paragraph_format.keep_with_next = True
     bullet = styles["List Bullet"]
@@ -140,6 +145,8 @@ def build(profile, output_dir):
     headline = doc.add_paragraph(profile["headline"])
     headline.paragraph_format.keep_with_next = True
     headline.runs[0].bold = True
+    if profile["language"] == "ko":
+        set_font(headline.runs[0], "Pretendard SemiBold", 11)
     doc.add_paragraph(profile["contact"], style="Resume Contact")
     doc.add_paragraph(profile["disclosure"], style="Resume Note")
     doc.add_paragraph(profile["summary_heading"], style="Heading 1")

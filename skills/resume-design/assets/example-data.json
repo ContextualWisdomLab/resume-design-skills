@@ -4,7 +4,8 @@
     "provenance": "Written from scratch for this skill; no third-party resume or template was copied.",
     "fictional_content": "Every person, employer, institution, project, date, and performance metric is invented for demonstration. Product names identify familiar software only; they do not imply sponsorship.",
     "contacts": "All contact addresses and links use the reserved example.org domain.",
-    "layout": "US Letter portrait; 20 mm margins; 11 pt body; single column; semantic headings; native Word bullets; no layout tables or text boxes."
+    "layout": "US Letter portrait; 20 mm margins; 11 pt body; single column; semantic headings; native Word bullets; no layout tables or text boxes.",
+    "typography": "Korean: Pretendard Regular body, SemiBold headings, Bold name; English: Noto Sans. Static desktop fonts are installed separately."
   },
   "resumes": [
     {

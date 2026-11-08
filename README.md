@@ -58,7 +58,7 @@ $resume-design
 | [Microsoft Word](https://support.microsoft.com/en-us/accessibility/word/make-your-word-documents-accessible-to-people-with-disabilities) | 기본 제목·목록 스타일, 표의 의미 구조, 접근성 점검 |
 | [W3C PDF3](https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF3) | 보기 좋은 외관과 논리적인 PDF 읽기 순서를 별도 검증 |
 
-11개 1차 자료의 확인 범위와 한계는 [출처 장부](skills/resume-design/references/sources.md), 기존 스킬·템플릿의 비교는 [기존 사례 조사](docs/prior-art.md)를 참고하세요. 글자 크기와 여백의 구체적인 시작값은 이 프로젝트의 디자인 선택으로 구분했습니다.
+12개 1차 자료의 확인 범위와 한계는 [출처 장부](skills/resume-design/references/sources.md), 기존 스킬·템플릿의 비교는 [기존 사례 조사](docs/prior-art.md)를 참고하세요. 글자 크기와 여백의 구체적인 시작값은 이 프로젝트의 디자인 선택으로 구분했습니다.
 
 ## 도구 실행
 
@@ -78,6 +78,8 @@ python3 skills/resume-design/scripts/audit_docx.py final.docx \
 ### 예제 다시 만들기
 
 예제 생성에는 `python-docx`가 추가로 필요합니다. 필요한 글꼴을 설치한 환경에서 실행하세요. PDF 변환과 페이지 검수에는 별도의 Word·LibreOffice·Poppler 같은 도구를 사용합니다.
+
+한글 예제는 **Pretendard Regular 본문 · SemiBold 소제목 · Bold 이름**을 사용합니다. 재현 시 [공식 배포본](https://github.com/orioncactus/pretendard/releases/tag/v1.3.9)의 문서용 정적 글꼴 세 굵기를 설치하세요. 확인한 버전은 1.3.9의 OTF이며, SemiBold의 Word 패밀리 이름은 `Pretendard SemiBold`입니다. 영문 예제에는 Noto Sans Regular·Bold가 필요합니다. PDF에는 실제 사용한 글꼴이 포함되어 있으며, 편집용 DOCX의 글꼴은 별도로 설치해야 합니다.
 
 ```bash
 python3 -m pip install -r requirements-examples.txt
