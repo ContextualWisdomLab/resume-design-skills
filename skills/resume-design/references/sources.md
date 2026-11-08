@@ -18,6 +18,8 @@
 | S10 | [MIT CAPD — Resumes](https://capd.mit.edu/resources/resumes/), Five steps 및 Resume Tips; 발행일 미표시 | 직무 관련성, 일정한 형식, 절제된 강조, 경력·학위에 따른 분량 예외 | 교육 권고. 고정된 심사 시간이나 합격률의 실험 근거로 사용하지 않음 |
 | S11 | [MIT CAPD — Sample Resumes PDF](https://cdn.uconnectlabs.com/wp-content/uploads/sites/123/2021/08/sampe-resumes-capd.pdf), 14쪽 PDF의 추출 본문과 섹션 구성 확인 | 섹션 제목, 경력별 정보 묶음, 날짜 표기의 사례 | 오래된 학생·연구자 예시. 원본의 정밀 시각 검수나 현대 ATS 성능 평가는 하지 않음. 내용·서식·코드를 복제하지 않음 |
 | S12 | [Pretendard 공식 안내](https://github.com/orioncactus/pretendard/blob/main/packages/pretendard/docs/en/README.md) 및 [OFL-1.1](https://github.com/orioncactus/pretendard/blob/main/LICENSE), 정적 OTF 1.3.9의 이름·굵기·내장 설정 확인 | 한글·라틴 문자 혼용을 위한 패밀리 선택, Regular·SemiBold·Bold 구분, 문서용 정적 글꼴 사용 | 서체 선택은 자체 디자인 판단. 글꼴 파일을 패키지에 번들하지 않으며 PDF의 실제 포함·표시 상태는 따로 검증 |
+| S13 | [Microsoft — 후속 페이지에서 테이블 헤더 반복](https://support.microsoft.com/ko-kr/word/repeat-table-header-on-subsequent-pages), 첫 행 선택·반복 설정·자동/수동 나누기; 날짜 미표시 | 실제 반복 머리행 설정과 자동 페이지 흐름 사용 | Word 기능 안내. 표 내부 수동 페이지 나누기에서는 머리행이 반복되지 않음. 변환기 출력은 별도 검수 |
+| S14 | [Microsoft — Set or change table properties](https://support.microsoft.com/en-us/office/security-privacy/set-or-change-table-properties), 표·행·열·셀 속성; 날짜 미표시 | 너비·여백·행 높이·행 나눔·머리행을 별개 속성으로 확인 | 특정 행 높이·셀 여백·선 굵기를 권고한 자료가 아님. D2의 수치는 자체 설계 |
 
 ## 한국 테크 기업 자료
 
@@ -37,6 +39,10 @@
 ## 이 프로젝트의 선택 D1
 
 단일 열을 기본으로 삼기, 본문 11 pt·여백 18~22 mm의 시작값, 지정 양식 구조 대조, 긴 경력의 정보 배분, 합성 예제, 최종 전 페이지 렌더와 텍스트 대조는 위 자료를 참고한 자체 설계다. 특정 숫자를 보편적 최적값으로 부르지 않는다.
+
+## 표 디자인 선택 D2
+
+[표 디자인 규격](table-design.md)의 열 비율, Pretendard 11 pt, 좌우 3 mm·상하 2 mm 셀 여백, 0.5 pt `#D9D9D9` 선, `#F2F4F6` 머리행, 1.15배 줄 간격, 정렬과 짧은 행/긴 행의 처리 기준은 자체 편집 기본값이다. S4·S13·S14의 단순 구조·머리행·Word 기능 안내와 구분한다. 원본의 필수 표 구조와 회사 지시가 우선이며 한국 테크 기업이 공동 채택한 규격이라고 표현하지 않는다.
 
 ## 상충하거나 범위가 좁은 권고 처리
 

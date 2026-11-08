@@ -85,5 +85,114 @@
     ],
     "font_update_baseline": "a8ac06651242fb7248ba84902312e0e324b0ccb4",
     "exact_paragraph_text_preserved": true
+  },
+  {
+    "file": "table-design-example",
+    "pages": 1,
+    "docx_matches_fixture": true,
+    "pdf_all_text_fragments_present": true,
+    "pdf_flow_and_layout_text_order": false,
+    "pdf_layout_row_associations_manual_review": true,
+    "pdf_flow_limitation": "Default pdftotext groups some career-summary columns and reorders a metric label. Layout extraction and page inspection retain the visible row associations. This is a visual specimen, not a validated linear-reading submission template.",
+    "structure": {
+      "structural_status": "review_required",
+      "blocking_findings": [],
+      "warnings": [
+        "table_reading_order_needs_review"
+      ],
+      "checks": {
+        "missing_required_text": [],
+        "baseline_text_equal": null
+      },
+      "structure": {
+        "tables": 3,
+        "text_boxes": 0,
+        "drawings": 0,
+        "multi_column_sections": 0,
+        "comments": 0,
+        "tracked_changes": 0,
+        "hidden_settings": 0,
+        "exact_height_rows": 0
+      },
+      "visual_review": "not_performed",
+      "ats_test": "not_performed",
+      "limitations": [
+        "No rendering, font substitution, page-count or clipping measurement.",
+        "XML body order is not a PDF reading-order or assistive-technology test.",
+        "Style inheritance and field results are not fully resolved; flags require review.",
+        "Text equality ignores whitespace; it does not prove factual or semantic accuracy.",
+        "Required-text checks are literal substrings, not evidence verification."
+      ]
+    },
+    "table_widths_twips": [
+      [
+        2194,
+        7778
+      ],
+      [
+        2393,
+        2792,
+        4787
+      ],
+      [
+        4587,
+        1795,
+        1795,
+        1795
+      ]
+    ],
+    "repeated_header_rows": 3,
+    "merged_cells": 0,
+    "embedded_font_rows": 4,
+    "embedded_font_faces": [
+      "Pretendard-Bold",
+      "Pretendard-Regular",
+      "Pretendard-SemiBold"
+    ],
+    "pdf_uri_annotations": [],
+    "visual_review_all_pages": true,
+    "sha256": {
+      "table-design-example.docx": "9082a45f8c31cd937aba9dd107c2366b4cd60a9979480148e98c10d3ebfc3ee6",
+      "table-design-example.pdf": "bd30436464ebac8c6969f397563a16189097536eb60e4f43fc8dff2872a7f09d"
+    },
+    "pagination_checks": {
+      "repeated-header": {
+        "pages": 2,
+        "header_repeated_on_all_pages": true,
+        "all_records_present": true,
+        "record_ranges": [
+          [
+            1,
+            12
+          ],
+          [
+            13,
+            24
+          ]
+        ],
+        "visual_review_all_pages": true
+      },
+      "long-row": {
+        "pages": 3,
+        "header_repeated_on_all_pages": true,
+        "all_records_present": true,
+        "record_ranges": [
+          [
+            1,
+            31
+          ],
+          [
+            32,
+            64
+          ],
+          [
+            65,
+            78
+          ]
+        ],
+        "visual_review_all_pages": true
+      }
+    },
+    "ooxml_table_property_order_checked": true
   }
 ]

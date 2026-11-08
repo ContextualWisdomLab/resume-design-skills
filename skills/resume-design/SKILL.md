@@ -1,6 +1,6 @@
 ---
 name: resume-design
-description: Use when creating, redesigning, formatting, or reviewing a resume, CV, 이력서, or 경력기술서 layout, typography, page breaks, employer-provided form, or final DOCX/PDF. Applies to Korean-English documents and experienced candidates across job functions. Content strategy belongs to a resume-writing skill.
+description: Use when creating, redesigning, formatting, or reviewing a resume, CV, 이력서, or 경력기술서 layout, typography, tables, page breaks, employer-provided form, or final DOCX/PDF. Applies to Korean-English documents and experienced candidates across job functions. Content strategy belongs to a resume-writing skill.
 ---
 
 # 이력서 디자인
@@ -31,6 +31,8 @@ description: Use when creating, redesigning, formatting, or reviewing a resume, 
 직무에 따라 어떤 경험을 강조할지는 내용 작성 스킬에서 정한다. 디자인은 개발·AX·재무·영업·인사·운영 등 직무에 공통으로 적용한다.
 
 한국 테크 기업에 지원하거나 국내 사례를 요청받으면 [한국 테크 기업 사례](references/korean-tech-cases.md)를 읽는다. 현행 공고·제출 화면, 공식 일반 안내, 직무별 조언, 직원 개인 사례를 구분한다. 제출 형식·첨부 수·용량·링크 허용 여부를 회사별로 기록하고, 다른 기업의 요구를 합쳐 공통 의무로 만들지 않는다.
+
+표를 만들거나 다듬을 때에는 [표 디자인 규격](references/table-design.md)을 적용한다. 항목·값, 경력 요약, 성과 비교의 열 비율과 셀 여백·선·음영·정렬·머리행·페이지 나눔을 함께 정한다. 새 자유 형식 표와 회사 지정 표의 보존 범위를 구별한다.
 
 ## 제작 순서
 

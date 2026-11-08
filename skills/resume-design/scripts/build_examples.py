@@ -14,12 +14,15 @@ from pathlib import Path
 
 from docx import Document
 from docx.enum.style import WD_STYLE_TYPE
+from docx.enum.table import WD_CELL_VERTICAL_ALIGNMENT, WD_TABLE_ALIGNMENT
+from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
-from docx.shared import Inches, Mm, Pt, RGBColor
+from docx.shared import Inches, Mm, Pt, RGBColor, Twips
 
 
 FIXTURE = Path(__file__).resolve().parents[1] / "assets" / "example-data.json"
+TABLE_FIXTURE = FIXTURE.with_name("table-example-data.json")
 
 
 def set_font(style, family, size, bold=False):
@@ -173,6 +176,105 @@ def build(profile, output_dir):
     print(destination)
 
 
+def add_data_table(doc, headers, rows, ratios, alignments, allow_split_rows=()):
+    """Apply D2 to a new data table; never rebuild an employer's existing form.
+
+    allow_split_rows uses one-based body-row indexes for required long rows.
+    Widths are computed for the current page; row heights remain automatic.
+    """
+    count = len(headers)
+    if (len(ratios) != count or len(alignments) != count
+            or sum(ratios) != 100 or any(r <= 0 for r in ratios)
+            or any(len(row) != count for row in rows)):
+        raise ValueError("Each row must match the columns and widths must sum to 100.")
+    section = doc.sections[-1]
+    total = int(round((section.page_width - section.left_margin
+                       - section.right_margin) / 635))  # EMU to twips
+    widths = [round(total * ratio / 100) for ratio in ratios]
+    widths[-1] = total - sum(widths[:-1])
+    table = doc.add_table(rows=1, cols=count)
+    table.alignment = WD_TABLE_ALIGNMENT.LEFT
+    table.autofit = False
+    properties = table._tbl.tblPr
+    preferred = properties.find(qn("w:tblW"))
+    preferred.set(qn("w:type"), "pct")
+    preferred.set(qn("w:w"), "5000")
+    look = properties.find(qn("w:tblLook"))
+    look.set(qn("w:val"), "0620")
+    look.set(qn("w:firstRow"), "1")
+    look.set(qn("w:firstColumn"), "0")
+    look.set(qn("w:noHBand"), "1")
+    look.set(qn("w:noVBand"), "1")
+    borders = OxmlElement("w:tblBorders")
+    for edge in ("top", "left", "bottom", "right", "insideH", "insideV"):
+        border = OxmlElement(f"w:{edge}")
+        for key, value in (("val", "single"), ("sz", "4"), ("color", "D9D9D9")):
+            border.set(qn(f"w:{key}"), value)
+        borders.append(border)
+    properties.insert_element_before(borders, "w:shd", "w:tblLayout", "w:tblCellMar", "w:tblLook")
+    margins = OxmlElement("w:tblCellMar")
+    for side, mm in (("top", 2), ("bottom", 2), ("left", 3), ("right", 3)):
+        margin = OxmlElement(f"w:{side}")
+        margin.set(qn("w:w"), str(round(mm * 1440 / 25.4)))
+        margin.set(qn("w:type"), "dxa")
+        margins.append(margin)
+    properties.insert_element_before(margins, "w:tblLook")
+    for column, width in zip(table.columns, widths):
+        column.width = Twips(width)
+    alignment = {"left": WD_ALIGN_PARAGRAPH.LEFT,
+                 "center": WD_ALIGN_PARAGRAPH.CENTER,
+                 "right": WD_ALIGN_PARAGRAPH.RIGHT}
+    for index, values in enumerate([headers, *rows]):
+        row = table.rows[0] if index == 0 else table.add_row()
+        row_properties = row._tr.get_or_add_trPr()
+        if index == 0 or index not in allow_split_rows:
+            row_properties.append(OxmlElement("w:cantSplit"))
+        if index == 0:
+            row_properties.append(OxmlElement("w:tblHeader"))
+        for column_index, (cell, value) in enumerate(zip(row.cells, values)):
+            cell.width = Twips(widths[column_index])
+            cell.vertical_alignment = (WD_CELL_VERTICAL_ALIGNMENT.TOP
+                                       if index in allow_split_rows
+                                       else WD_CELL_VERTICAL_ALIGNMENT.CENTER)
+            shading = OxmlElement("w:shd")
+            shading.set(qn("w:val"), "clear")
+            shading.set(qn("w:fill"), "F2F4F6" if index == 0 else "FFFFFF")
+            cell._tc.get_or_add_tcPr().insert_element_before(shading, "w:vAlign")
+            cell.text = value
+            paragraph = cell.paragraphs[0]
+            paragraph.alignment = alignment[alignments[column_index]]
+            formatting = paragraph.paragraph_format
+            formatting.space_before = formatting.space_after = Pt(0)
+            formatting.left_indent = formatting.right_indent = Pt(0)
+            formatting.line_spacing = 1.15
+            formatting.keep_with_next = index == 0
+            formatting.keep_together = False
+            formatting.widow_control = False
+            for run in paragraph.runs:
+                set_font(run, "Pretendard SemiBold" if index == 0 else "Pretendard", 11)
+    return table
+
+
+def build_table_example(output_dir):
+    fixture = json.loads(TABLE_FIXTURE.read_text(encoding="utf-8"))
+    doc = Document()
+    configure(doc, {"language": "ko", "name": fixture["title"]})
+    doc.add_paragraph(fixture["title"], style="Title")
+    doc.add_paragraph(fixture["introduction"])
+    for spec in fixture["tables"]:
+        heading = doc.add_paragraph(spec["title"], style="Heading 1")
+        heading.paragraph_format.space_before = Pt(10)
+        heading.paragraph_format.space_after = Pt(4)
+        add_data_table(doc, spec["headers"], spec["rows"],
+                       spec["ratios"], spec["alignments"])
+        if spec.get("after"):
+            paragraph = doc.add_paragraph(spec["after"])
+            paragraph.paragraph_format.space_before = Pt(6)
+    destination = output_dir / (fixture["slug"] + ".docx")
+    doc.save(destination)
+    print(destination)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-dir", required=True, type=Path)
@@ -181,6 +283,7 @@ def main():
     fixture = json.loads(FIXTURE.read_text(encoding="utf-8"))
     for profile in fixture["resumes"]:
         build(profile, args.output_dir)
+    build_table_example(args.output_dir)
 
 
 if __name__ == "__main__":
