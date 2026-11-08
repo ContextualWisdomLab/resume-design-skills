@@ -6,7 +6,7 @@
 
 | ID | 자료·확인 범위 | 적용한 내용 | 한계 |
 | --- | --- | --- | --- |
-| S1 | [Harvard MCS — Guide to Creating a Strong Resume](https://careerservices.fas.harvard.edu/resources/create-a-strong-resume/), Quick Tips 및 국제 지원 안내; 발행일 미표시 | 일관된 형식, 여백, 관련성에 따른 섹션 순서, 역순 경력, PDF 변환 후 확인 | 미국 대학의 교육 권고. 사진·개인정보 관행을 한국의 지정 양식에 강제하지 않음 |
+| S1 | [Harvard MCS — Guide to Creating a Strong Resume](https://careerservices.fas.harvard.edu/resources/create-a-strong-resume/), Quick Tips·Top Five Resume Mistakes·Using AI·국제 지원 안내; 발행일 미표시 | 일관된 형식, 관련성에 따른 순서, 오탈자·연락처 누락·결과 없는 서술 점검, 사실 기반 문장과 AI 편집 검토 | 미국 대학의 교육 권고. 사진·개인정보 관행을 한국의 지정 양식에 강제하지 않음. 특정 표현의 탈락률 근거가 아님 |
 | S2 | [Harvard MCS — Resumes & Cover Letters for PhD Students](https://careerservices.fas.harvard.edu/resources/resumes-cover-letters-for-phd-students/), 분량·서식 FAQ; 발행일 미표시 | 10~12 pt, 최소 0.5 inch 여백, 지원처의 분량 지시 우선 | 박사과정 대상 안내. 모든 경력자에게 1~2쪽 상한을 만들 근거가 아님 |
 | S3 | [Greenhouse — Unsuccessful resume parse](https://support.greenhouse.io/hc/en-us/articles/200989175-Unsuccessful-resume-parse), 파싱 실패 원인; 2026-03-02 갱신 표시 | 다단, 복잡한 표, 머리말·텍스트 상자 연락처, 이미지 문서 등의 위험과 실제 필드 확인 | Greenhouse 제품 문서. 모든 ATS가 같은 방식으로 실패한다는 뜻이 아님. 합성 자료의 실제 파싱도 보장하지 않음 |
 | S4 | [Microsoft — Make your Word documents accessible](https://support.microsoft.com/en-us/accessibility/word/make-your-word-documents-accessible-to-people-with-disabilities), 제목·목록·표·링크·색·접근성 검사 안내; 발행일 미표시 | 기본 제목 스타일, 논리적 위계, 표의 의미 구조, 충분한 대비, 의미 있는 링크 | 지침 준수만으로 모든 보조 기술에서 사용성이 검증되지는 않음 |
@@ -20,6 +20,7 @@
 | S12 | [Pretendard 공식 안내](https://github.com/orioncactus/pretendard/blob/main/packages/pretendard/docs/en/README.md) 및 [OFL-1.1](https://github.com/orioncactus/pretendard/blob/main/LICENSE), 정적 OTF 1.3.9의 이름·굵기·내장 설정 확인 | 한글·라틴 문자 혼용을 위한 패밀리 선택, Regular·SemiBold·Bold 구분, 문서용 정적 글꼴 사용 | 서체 선택은 자체 디자인 판단. 글꼴 파일을 패키지에 번들하지 않으며 PDF의 실제 포함·표시 상태는 따로 검증 |
 | S13 | [Microsoft — 후속 페이지에서 테이블 헤더 반복](https://support.microsoft.com/ko-kr/word/repeat-table-header-on-subsequent-pages), 첫 행 선택·반복 설정·자동/수동 나누기; 날짜 미표시 | 실제 반복 머리행 설정과 자동 페이지 흐름 사용 | Word 기능 안내. 표 내부 수동 페이지 나누기에서는 머리행이 반복되지 않음. 변환기 출력은 별도 검수 |
 | S14 | [Microsoft — Set or change table properties](https://support.microsoft.com/en-us/office/security-privacy/set-or-change-table-properties), 표·행·열·셀 속성; 날짜 미표시 | 너비·여백·행 높이·행 나눔·머리행을 별개 속성으로 확인 | 특정 행 높이·셀 여백·선 굵기를 권고한 자료가 아님. D2의 수치는 자체 설계 |
+| S15 | [MIT CAPD — Career toolkit: Crafting an effective resume](https://capd.mit.edu/resources/career-toolkit-crafting-an-effective-resume/), 공식 동영상 전사 중 관련성·서체 축소·PAR·수치가 없을 때의 서술; 날짜 미표시 | 업무 나열을 맥락·행동·결과로 구체화하고, 분량을 위한 서체 축소를 피하며, 정확한 숫자가 없으면 역할·결과를 설명 | 교육 자료. 학생·연구자 중심의 분량 조언을 모든 CV·경력기술서에 강제하지 않음. 일반적인 ATS 설명은 제품 실측 근거로 채택하지 않음 |
 
 ## 한국 테크 기업 자료
 
@@ -35,6 +36,7 @@
 | K6 | [LINE — 2020 상반기 신입 개발자 3인 입사기](https://engineering.linecorp.com/ko/blog/2020-first-half-new-liners-interview/), 2020-09-03; 서류 준비 부분 | 프로젝트 구조·역할·기술과 요약/상세 구분. 당시 신입 개인 사례 |
 | K7 | [LINE — 서버 개발자가 되기까지 준비한 것들](https://engineering.linecorp.com/ko/blog/things-i-prepared-to-be-a-line-server-developer/), 김준호, 2019-10-21; 포트폴리오 부분 | 수행 내용·방법·이유와 직무 관련성. 현재 회사 규정이나 경력 삭제 기준으로 확대하지 않음 |
 | K8 | [NAVER Careers FAQ](https://recruit.navercorp.com/bbs/faq.do?lang=ko), FAQ 날짜 미표시; 온라인 지원 안내 | 제출 완료·수정 가능 시점 확인. 서체·첨부 형식·쪽수의 근거는 아님 |
+| K9 | [우아한형제들 — 왕초보 신입 개발자의 우당탕탕 이력서 작성기](https://techblog.woowahan.com/11998/), 권시연, 2023-05-23; 본문 경험·기술·STAR·링크 점검 | 신입 개인의 수정 경험이며 글에 공식 의견이 아니라고 명시. 설명할 수 없는 기술·기능 나열을 점검하되 프로젝트 개수·불합격률 표현을 표준·통계로 채택하지 않음 |
 
 ## 이 프로젝트의 선택 D1
 
@@ -43,6 +45,10 @@
 ## 표 디자인 선택 D2
 
 [표 디자인 규격](table-design.md)의 열 비율, Pretendard 11 pt, 좌우 3 mm·상하 2 mm 셀 여백, 0.5 pt `#D9D9D9` 선, `#F2F4F6` 머리행, 1.15배 줄 간격, 정렬과 짧은 행/긴 행의 처리 기준은 자체 편집 기본값이다. S4·S13·S14의 단순 구조·머리행·Word 기능 안내와 구분한다. 원본의 필수 표 구조와 회사 지시가 우선이며 한국 테크 기업이 공동 채택한 규격이라고 표현하지 않는다.
+
+## 안티패턴 교정 선택 D3
+
+[20개 안티패턴](anti-patterns.md)의 관찰·이유·교정·예외·검증 형식, 사실·단위·기여 보존, 숨긴 키워드 금지, 불확실한 수치를 만들지 않기, 구조 검사·텍스트 추출·실제 제출·채용 결과의 구분은 자체 편집·검증 기준이다. 기관의 긍정적인 작성 조언에서 도출한 실패 패턴은 편집적 해석으로 표시하며 원문이 불합격 사유를 직접 선언했다고 표현하지 않는다. 합성 교정 예문은 외부 이력서에서 복제하지 않았다.
 
 ## 상충하거나 범위가 좁은 권고 처리
 
