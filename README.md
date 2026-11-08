@@ -2,7 +2,7 @@
 
 이력서의 사실과 제출 조건을 보존하면서 경력·역할·성과를 찾기 쉽게 배치하는 공개 Agent Skill입니다. 한국어와 영어가 섞인 문서, 경력이 긴 지원자, 회사 지정 Word 양식을 다룹니다.
 
-**스킬 이름:** `resume-design` · **라이선스:** MIT · **자료 확인일:** 2026-11-08
+**스킬:** [resume-design](skills/resume-design/SKILL.md) · **라이선스:** MIT · **자료 확인일:** 2026-11-08
 
 ## 무엇을 하는가
 
@@ -23,7 +23,7 @@
 | [DOCX](examples/standard-resume.docx) · [PDF](examples/standard-resume.pdf) | [DOCX](examples/experienced-manager-resume.docx) · [PDF](examples/experienced-manager-resume.pdf) |
 | ![일반형 이력서 한 쪽](examples/standard-preview.png) | ![경력자 이력서 첫 쪽](examples/manager-preview.png) |
 
-경력자형의 둘째 쪽은 PDF에서 확인할 수 있습니다. 최신 렌더와 확인 범위는 [검증 기록](docs/validation.md)에 남깁니다.
+경력자형의 둘째 쪽은 [미리보기](examples/manager-page-2.png) 또는 PDF에서 확인할 수 있습니다. 최신 렌더와 확인 범위는 [검증 기록](docs/validation.md)에 남깁니다.
 
 ## 사용
 
