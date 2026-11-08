@@ -58,7 +58,22 @@ $resume-design
 | [Microsoft Word](https://support.microsoft.com/en-us/accessibility/word/make-your-word-documents-accessible-to-people-with-disabilities) | 기본 제목·목록 스타일, 표의 의미 구조, 접근성 점검 |
 | [W3C PDF3](https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF3) | 보기 좋은 외관과 논리적인 PDF 읽기 순서를 별도 검증 |
 
-12개 1차 자료의 확인 범위와 한계는 [출처 장부](skills/resume-design/references/sources.md), 기존 스킬·템플릿의 비교는 [기존 사례 조사](docs/prior-art.md)를 참고하세요. 글자 크기와 여백의 구체적인 시작값은 이 프로젝트의 디자인 선택으로 구분했습니다.
+기관·제품·기업의 1차 자료별 확인 범위와 한계는 [출처 장부](skills/resume-design/references/sources.md), 기존 스킬·템플릿의 비교는 [기존 사례 조사](docs/prior-art.md)를 참고하세요. 글자 크기와 여백의 구체적인 시작값은 이 프로젝트의 디자인 선택으로 구분했습니다.
+
+## 한국 테크 기업 사례
+
+[기업별 사례와 적용 가이드](skills/resume-design/references/korean-tech-cases.md)에 공식 안내, 직무별 요구, 작성자의 개인 경험을 나누어 정리했습니다.
+
+| 기업·자료 | 스킬에 반영한 판단 |
+| --- | --- |
+| [토스 합류 안내](https://toss.im/career/joining-guide) | 경험의 영향·학습을 찾기 쉽게 배치하고, PDF 변환 뒤 서식을 확인 |
+| [당근 지원 FAQ](https://careers.daangn.com/faq/지원-관련/)와 [디자인 직무 공고](https://careers.daangn.com/jobs/role/6589282003/) | 제출 방식과 협업 기여 표시를 구분해 적용 |
+| [쿠팡 채용 FAQ](https://www.coupang.jobs/kr/how-we-hire/faq/) | 첨부 조합·압축·URL·용량을 회사별로 확인 |
+| [우아한형제들 기술블로그의 2017년 제작 사례](https://techblog.woowahan.com/2531/) | 최근 경험과 문제해결 사례의 배치를 참고하되 현행 채용 규칙과 구분 |
+| [LINE의 2020년 신입 사례](https://engineering.linecorp.com/ko/blog/2020-first-half-new-liners-interview/)와 [2019년 서버 개발자 경험](https://engineering.linecorp.com/ko/blog/things-i-prepared-to-be-a-line-server-developer/) | 요약과 상세 자료를 연결하고, 무엇을·어떻게·왜 했는지 함께 배치 |
+| [NAVER Careers FAQ](https://recruit.navercorp.com/bbs/faq.do?lang=ko) | 온라인 입력과 첨부 문서의 정합성, 실제 접수 완료 확인 |
+
+자유 형식이라고 제출 조건까지 같은 것은 아닙니다. 특히 당근과 쿠팡은 ZIP·문서 내 링크 안내가 다르므로 회사별 제출본을 준비합니다. Pretendard와 본문 11 pt는 이 프로젝트의 기본값이며 위 기업의 공식 이력서 규격을 뜻하지 않습니다.
 
 ## 도구 실행
 
