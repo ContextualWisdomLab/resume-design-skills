@@ -76,6 +76,30 @@ class ResumePreflightTests(unittest.TestCase):
         report = module.audit_docx(path)
         self.assertEqual(report["structure"]["hidden_settings"], 0)
 
+    def test_table_property_revisions_block_submission(self):
+        cell = '<w:tc><w:p><w:r><w:t>필수 항목</w:t></w:r></w:p></w:tc>'
+        fixtures = {
+            "tcPrChange": '<w:tr><w:tc><w:tcPr><w:tcPrChange w:id="1" w:author="Example"><w:tcPr/></w:tcPrChange></w:tcPr><w:p><w:r><w:t>필수 항목</w:t></w:r></w:p></w:tc></w:tr>',
+            "trPrChange": '<w:tr><w:trPr><w:trPrChange w:id="1" w:author="Example"><w:trPr/></w:trPrChange></w:trPr>' + cell + '</w:tr>',
+            "tblGridChange": '<w:tblGrid><w:gridCol w:w="2000"/><w:tblGridChange w:id="1"><w:tblGrid><w:gridCol w:w="1500"/></w:tblGrid></w:tblGridChange></w:tblGrid><w:tr>' + cell + '</w:tr>',
+            "tblPrExChange": '<w:tr><w:tblPrEx><w:tblPrExChange w:id="1" w:author="Example"><w:tblPrEx/></w:tblPrExChange></w:tblPrEx>' + cell + '</w:tr>',
+        }
+        for tag, markup in fixtures.items():
+            with self.subTest(tag=tag):
+                path = self.fixture(tag + '.docx', '<w:tbl>' + markup + '</w:tbl>')
+                report = module.audit_docx(path)
+                self.assertGreater(report["structure"]["tracked_changes"], 0)
+                self.assertIn("tracked_changes_present", report["blocking_findings"])
+
+    def test_cell_insert_delete_merge_revisions_block_submission(self):
+        for tag in ("cellIns", "cellDel", "cellMerge"):
+            with self.subTest(tag=tag):
+                body = f'<w:tbl><w:tr><w:tc><w:tcPr><w:{tag} w:id="1" w:author="Example"/></w:tcPr><w:p><w:r><w:t>필수 항목</w:t></w:r></w:p></w:tc></w:tr></w:tbl>'
+                path = self.fixture(tag + '.docx', body)
+                report = module.audit_docx(path)
+                self.assertGreater(report["structure"]["tracked_changes"], 0)
+                self.assertIn("tracked_changes_present", report["blocking_findings"])
+
     def test_order_change_is_not_a_layout_only_change(self):
         old = self.fixture("old.docx", '<w:p><w:r><w:t>A사</w:t></w:r></w:p><w:p><w:r><w:t>B사</w:t></w:r></w:p>')
         new = self.fixture("new.docx", '<w:p><w:r><w:t>B사</w:t></w:r></w:p><w:p><w:r><w:t>A사</w:t></w:r></w:p>')

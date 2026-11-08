@@ -61,7 +61,11 @@ def audit_docx(path, baseline=None, required_text=()):
             for node in document.iter(W + "cols")
         ),
         "comments": count("comment"),
-        "tracked_changes": sum(count(tag) for tag in ("ins", "del", "moveFrom", "moveTo", "pPrChange", "rPrChange", "tblPrChange", "sectPrChange")),
+        "tracked_changes": sum(count(tag) for tag in (
+            "ins", "del", "moveFrom", "moveTo", "pPrChange", "rPrChange",
+            "tblPrChange", "sectPrChange", "tcPrChange", "trPrChange",
+            "tblGridChange", "tblPrExChange", "cellIns", "cellDel", "cellMerge",
+        )),
         "hidden_settings": sum(node.tag in {W + "vanish", W + "webHidden"} and enabled(node) for node in nodes),
         "exact_height_rows": sum(node.get(W + "hRule") == "exact" for node in nodes if node.tag == W + "trHeight"),
     }

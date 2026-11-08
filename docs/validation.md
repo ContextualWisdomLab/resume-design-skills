@@ -7,12 +7,14 @@
 | 항목 | 결과와 범위 |
 | --- | --- |
 | 스킬 메타데이터 | 정식 스킬 검증기로 `name`, `description`, YAML과 이름 형식 검증 통과 |
-| 자동화 테스트 | `python3 -m unittest discover -s tests -v`: 7개 테스트 통과 |
-| 테스트가 다룬 동작 | Word run 분할에 따른 거짓 변경 방지, 수치 변경 검출, 필수 문자열 누락, 지정 표의 경고 및 원본 바이트 보존, 다단·머리말·주석·변경 추적 감지, 거짓 숨김 설정 구별, 본문 순서 변경 검출 |
+| 자동화 테스트 | `python3 -m unittest discover -s tests -v`: 9개 테스트 통과. 표·셀 변경 추적의 7개 변형 사례 포함 |
+| 테스트가 다룬 동작 | Word run 분할에 따른 거짓 변경 방지, 수치 변경 검출, 필수 문자열 누락, 지정 표의 경고 및 원본 바이트 보존, 다단·머리말·주석·변경 추적 감지, 거짓 숨김 설정 구별, 본문 순서 변경 검출, 표 속성·셀 삽입·삭제·병합의 변경 추적 검출 |
 | 구현 순서 | 도구가 없을 때 7개 테스트의 실패를 확인한 뒤 검사기를 구현하고 다시 실행. 이것은 코드 검증 과정이며 스킬 자체의 효과 비교가 아님 |
 | 시나리오 적용 | 지정 양식, 장기 경력, 이력서·작품집·학술 CV 구분의 세 사례 검토. 자세한 결과와 스킬 없는 기준 응답은 [평가 기록](../evaluations/results.md) 참조 |
 
 검사기는 ZIP 안의 Word XML을 읽을 뿐 파일을 수정하지 않는다. `structural_status: clear`는 이 도구가 발견한 차단·경고 항목이 없다는 뜻이다. `visual_review`와 `ats_test`는 항상 별도로 남겨 자동 검사 범위를 드러낸다.
+
+독립 코드 검토에서 표 관련 변경 추적 요소가 빠진 문제를 발견했다. `tcPrChange`, `trPrChange`, `tblGridChange`, `tblPrExChange`, `cellIns`, `cellDel`, `cellMerge`를 각각 넣은 사례가 기존 검사기에서 실패하는 것을 재현한 뒤 수정했다. Microsoft의 [셀 삭제 변경 추적](https://learn.microsoft.com/en-us/dotnet/api/documentformat.openxml.wordprocessing.celldeletion?view=openxml-3.0.1) 및 [표 예외 속성 변경](https://learn.microsoft.com/en-us/dotnet/api/documentformat.openxml.wordprocessing.tablepropertyexceptionschange?view=openxml-2.20.0) 문서로 요소의 의미를 확인했다. 최종 9개 테스트가 모두 통과했고 공개 예제 두 건의 구조 검사 결과도 유지됐다.
 
 ## 공개 예제
 
